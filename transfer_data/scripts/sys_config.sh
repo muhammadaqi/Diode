@@ -17,7 +17,7 @@
 #
 #############################################################################################################
 
-repo="http://192.168.0.102:8000/" Diode
+repo="https://github.com/muhammadaqi/Diode.git" Diode
 repofolder="Diode"
 required_locale="en_US"
 
@@ -167,12 +167,12 @@ echo " "
 echo "Installing version control software"
 echo "###################################"
    log_msg "Installing version control software"
-   sudo apt-get -y install mercurial #tortoisehg # tortoisehg not required (no GUI installed)
-   # Write basic .hgrc file if it doesn't exist
-   if [ ! -f ~/.hgrc ]; then
-      echo "Writing user .hgrc file (~/.hgrc) "
-      echo [ui] >> ~/.hgrc
-      echo username = Raspberry Pi >> ~/.hgrc
+   sudo apt-get -y install git #mercurial #tortoisehg # tortoisehg not required (no GUI installed)
+  # Write basic .git file if it doesn't exist
+   if [ ! -f ~/.git ]; then
+      echo "Writing user .git file (~/.git) "
+      echo [ui] >> ~/.git
+     echo username = Raspberry Pi >> ~/.git
    fi
    echo " "
 
@@ -262,7 +262,7 @@ log_msg "User and Group Config"
    echo "cd /opt/sierra/" >> ~/setup.sh
 
    echo "echo Cloning Repository" >> ~/setup.sh
-   echo "hg clone $repo $repofolder" >> ~/setup.sh
+   echo "git clone $repo $repofolder" >> ~/setup.sh
 
    echo "echo ##################################################" >> ~/setup.sh
    echo "cd" >> ~/setup.sh
