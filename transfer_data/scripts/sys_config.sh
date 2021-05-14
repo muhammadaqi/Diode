@@ -354,9 +354,9 @@ sudo chown controls /home/controls/setup.sh
 sudo chmod 755 /home/controls/setup.sh
 sudo chgrp controls /home/controls/setup.sh
 
-sudo cp ~/.hgrc /home/controls
-sudo chown controls /home/controls/.hgrc
-sudo chgrp controls /home/controls/.hgrc
+sudo cp ~/.git /home/controls
+sudo chown controls /home/controls/.git
+sudo chgrp controls /home/controls/.git
 
 # Request controls login and run setup.sh
 log_msg "Asking user to login as controls in order to run setup.sh script"
