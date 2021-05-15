@@ -17,8 +17,8 @@
 #
 #############################################################################################################
 
-repo="https://github.com/muhammadaqi/Diode.git" Diode
-repofolder="Diode"
+repo="https://github.com/muhammadaqi/Diode.git"
+repofolder="muhammadaqi/Diode"
 required_locale="en_US"
 
 function check_serial_port(){
