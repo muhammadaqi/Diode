@@ -269,7 +269,7 @@ log_msg "User and Group Config"
    echo "mkdir -p ~/.ssh" >> ~/setup.sh
    echo "echo Importing controls SSH public key" >> ~/setup.sh
 
-   echo "echo <Generate a SSH key pair and insert public key here> > ~/.ssh/authorized_keys" >> ~/setup.sh
+   echo "echo <Generate a SSH key pair and insert public key here>> ~/.ssh/authorized_keys" >> ~/setup.sh
 
    echo "chmod 700 ~/.ssh" >> ~/setup.sh
    echo "chmod 600 ~/.ssh/authorized_keys" >> ~/setup.sh
