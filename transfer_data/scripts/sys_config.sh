@@ -274,12 +274,12 @@ log_msg "User and Group Config"
    echo "chmod 700 ~/.ssh" >> ~/setup.sh
    echo "chmod 600 ~/.ssh/authorized_keys" >> ~/setup.sh
    echo "echo ##################################################" >> ~/setup.sh
-   echo "ln -s /opt/sierra/data_diode/transfer_data/scripts/create_serial_send_startup_cron ~/Sending_Secure_Network_Setup_script" >> ~/setup.sh
-   echo "ln -s /opt/sierra/data_diode/transfer_data/scripts/create_serial_recv_startup_cron ~/Receiving_External_Network_Setup_script" >> ~/setup.sh
-   echo "ln -s /opt/sierra/data_diode/upload_data/scripts/create_fileuploader_cron ~/Uploader_External_Network_Setup_script" >> ~/setup.sh
-   echo "ln -s /opt/sierra/data_diode/transfer_data/scripts/network_security_setup_script.sh ~/Network_Security_Setup_script" >> ~/setup.sh
-   echo "ln -s /opt/sierra/data_diode/transfer_data/scripts/sshfs_connection_setup_script ~/Server_Share_SSHFS_Connection_Setup_script" >> ~/setup.sh
-   echo "ln -s /opt/sierra/data_diode/transfer_data/scripts/logrotate_setup_script ~/Log_Rotate_Setup_script" >> ~/setup.sh
+   echo "ln -s /opt/sierra/muhammadaqi/Diode/transfer_data/scripts/create_serial_send_startup_cron ~/Sending_Secure_Network_Setup_script" >> ~/setup.sh
+   echo "ln -s /opt/sierra/muhammadaqi/Diode/transfer_data/scripts/create_serial_recv_startup_cron ~/Receiving_External_Network_Setup_script" >> ~/setup.sh
+   echo "ln -s /opt/sierra/muhammadaqi/Diode/upload_data/scripts/create_fileuploader_cron ~/Uploader_External_Network_Setup_script" >> ~/setup.sh
+   echo "ln -s /opt/sierra/muhammadaqi/Diode/transfer_data/scripts/network_security_setup_script.sh ~/Network_Security_Setup_script" >> ~/setup.sh
+   echo "ln -s /opt/sierra/muhammadaqi/Diode/transfer_data/scripts/sshfs_connection_setup_script ~/Server_Share_SSHFS_Connection_Setup_script" >> ~/setup.sh
+   echo "ln -s /opt/sierra/muhammadaqi/Diode/transfer_data/scripts/logrotate_setup_script ~/Log_Rotate_Setup_script" >> ~/setup.sh
    #echo "ls -al" >> ~/setup.sh
 
 
@@ -367,7 +367,7 @@ echo " "
 echo "Installing logrotate configuration"
 echo "##################################"
 log_msg "Installing logrotate configuration"
-. /opt/sierra/data_diode/transfer_data/scripts/logrotate_setup_script
+. /opt/sierra/muhammadaqi/Diode/transfer_data/scripts/logrotate_setup_script
 
 
 # Upgrade OS / software
