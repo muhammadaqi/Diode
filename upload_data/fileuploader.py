@@ -272,7 +272,7 @@ def check_for_cmd(slack, localuploadsource, dropboxtoken, slacktoken, slackchann
     filename = 'command.txt'
     response = 'command_response.txt'
     path = os.path.join('/', folder, subfolder, filename)
-    res = os.path.join(os.path.dirname(os.path.realpath(__file__)), response) #'/opt/sierra/data_diode/upload_data'
+    res = os.path.join(os.path.dirname(os.path.realpath(__file__)), response) #'/opt/sierra/muhammadqi/Diode/upload_data'
 
     write_response_file(response, 'w', 'Command Check Starting\n')
     dbx = dropbox.Dropbox(dropboxtoken)
@@ -377,11 +377,11 @@ def parse_cmd(command, slack, slackchannel):
 
     elif command == "reboot_internal":
         msg = '{}\t{}'.format(msg, 'Rebooting internal (secure) Pi. Here goes nothing...'.format(command))
-        parsed_cmd = ['/opt/sierra/data_diode/scripts/reboot_internal.sh'] # TBD via script/GPIO
+        parsed_cmd = ['/opt/sierra/muhammadaqi/Diode/scripts/reboot_internal.sh'] # TBD via script/GPIO
 
     elif command == "get_external_logs":
         msg = '{}\t{}'.format(msg, 'Copying external Pi logs to upload folder.'.format(command))
-        parsed_cmd = ['/opt/sierra/data_diode/transfer_data/scripts/daily_log_upload']
+        parsed_cmd = ['/opt/sierra/muhammadaqi/Diode/transfer_data/scripts/daily_log_upload']
 
     elif command == "noop":
         msg = '{}\t{}'.format(msg, 'Running noop command (clear).'.format(command))
@@ -518,7 +518,7 @@ if __name__ == '__main__':
 
     pid, pidfile  = getpid()
     delay = 60
-    configfile = '/opt/sierra/data_diode/upload_data/fileuploader.cfg'
+    configfile = '/opt/sierra/muhammadaqi/Diode/upload_data/fileuploader.cfg'
 
     logger.info('File Uploader starting with PID {}.  {} second delay between scans.'.format(pid, delay))
 
