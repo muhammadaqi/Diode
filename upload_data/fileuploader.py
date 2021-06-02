@@ -272,7 +272,7 @@ def check_for_cmd(slack, localuploadsource, dropboxtoken, slacktoken, slackchann
     filename = 'command.txt'
     response = 'command_response.txt'
     path = os.path.join('/', folder, subfolder, filename)
-    res = os.path.join(os.path.dirname(os.path.realpath(__file__)), response) #'/opt/sierra/muhammadqi/Diode/upload_data'
+    res = os.path.join(os.path.dirname(os.path.realpath(__file__)), response) #'/opt/sierra/muhammadaqi/Diode/upload_data'
 
     write_response_file(response, 'w', 'Command Check Starting\n')
     dbx = dropbox.Dropbox(dropboxtoken)
