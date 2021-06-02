@@ -2,7 +2,7 @@
 # Configure the following parameters - most importantly 'server'.
 # Timeout, User, and Mountpoint should not need to change.
 
-server="<SERVERNAME>"
+server="192.168.0.10"
 connecttimeout=10 # Time before SSH connection times out and fails (seconds)
 
 user="controls"
@@ -22,7 +22,7 @@ then
 else
    echo "Not mounted"
    printf "$(date '+%Y/%m/%d %T')\tNot mounted. Attempting SSHFS connection.\n" >> $logdir/log-sshfs-mount.log
-   sudo sshfs $user@$server:/server/ $mountpoint -o reconnect -o workaround=all -o ssh_command=ssh -o ConnectTimeout=$connecttimeout
+   sudo sshfs $user@$server:/server/ $mountpoint -d -o reconnect -o workaround=all -o ssh_command=ssh -o ConnectTimeout=$connecttimeout
 
    printf "$(date '+%Y/%m/%d %T')\tSSHFS mount attempt done. Checking for mount point via disk usage.\n" >> $logdir/log-sshfs-mount.log
    printf "%s\t%s\n" "$(date '+%Y/%m/%d %T')" "Disk Usage output: $(sudo df -h | grep /tmp/server)" >> $logdir/log-sshfs-mount.log
