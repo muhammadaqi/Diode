@@ -6,10 +6,10 @@ echo " "
 echo "Adding cron entry"
 
    # Start Sending process
-   echo "@reboot python /opt/sierra/data_diode/upload_data/fileuploader.py" > cron_fileuploader_startup
+   echo "@reboot python /opt/sierra/muhammadaqi/Diode/upload_data/fileuploader.py" > cron_fileuploader_startup
 
    # Periodic check to verify process still running
-   echo "* * * * * /opt/sierra/data_diode/upload_data/scripts/fileuploader_pidcheck.sh" >> cron_fileuploader_startup
+   echo "* * * * * /opt/sierra/muhammadaqi/Diode/upload_data/scripts/fileuploader_pidcheck.sh" >> cron_fileuploader_startup
 
 
    crontab cron_fileuploader_startup
