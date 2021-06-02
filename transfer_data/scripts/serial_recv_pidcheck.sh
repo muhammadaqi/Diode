@@ -5,7 +5,7 @@ function start_service(){
 	echo "Restarting process"
 	date >> $LOG
         echo "Restarting closed process" >> $LOG
-	cd /opt/sierra/data_diode/transfer_data/
+	cd /opt/sierra/muhammadaqi/Diode/transfer_data/
 	./serial-recv-file.py &
 }
 
