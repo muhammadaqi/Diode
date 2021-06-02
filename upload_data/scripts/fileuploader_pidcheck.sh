@@ -6,7 +6,7 @@ function start_service(){
 	date >> $LOG
         echo "Restarting closed process" >> $LOG
 	cd ~
-	cd /opt/sierra/data_diode/upload_data
+	cd /opt/sierra/muhammadaqi/Diode/upload_data
 	./fileuploader.py &
 }
 
